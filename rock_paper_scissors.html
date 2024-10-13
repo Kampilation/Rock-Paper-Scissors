@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Camera Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        #gameArea {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #videoElement {
+            width: 640px;
+            height: 480px;
+            border: 2px solid #333;
+        }
+        #computerChoice, #result {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        #playButton {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors Camera Game</h1>
+    <div id="gameArea">
+        <video id="videoElement" autoplay playsinline></video>
+        <div id="computerChoice">Computer's choice: </div>
+        <div id="result"></div>
+        <button id="playButton">Play</button>
+    </div>
+
+    <script src="rock_paper_scissors.js"></script>
+</body>
+</html>
